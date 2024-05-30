@@ -2,13 +2,50 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
+
+  safelist: [
+    "text-2xl",
+    "text-3xl",
+    "bg-red-500",
+    "bg-green-500",
+    "bg-blue-500",
+    "bg-rose-500",
+    "bg-purple-500",
+    "bg-red-500/50",
+    "bg-green-500/50",
+    "bg-blue-500/50",
+    "bg-rose-500/50",
+    "bg-purple-500/50",
+    "bg-red-500/30",
+    "bg-green-500/30",
+    "bg-blue-500/30",
+    "bg-rose-500/30",
+    "bg-purple-500/30",
+    "border-l-red-500",
+    "border-l-green-500",
+    "border-l-blue-500",
+    "border-l-rose-500",
+    "border-l-purple-500",
+    {
+      pattern: /(border)-(red|green|blue|rose|purple|main)-(100|200|300|500)/,
+      variants: ["lg", "hover", "focus", "lg:hover"],
+    },
   ],
   prefix: "",
   theme: {
+    screens: {
+      xs: "500px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -21,6 +58,10 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        main: {
+          DEFAULT: "hsl(var(--main))",
+          foreground: "hsl(var(--main-foreground))",
+        },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
@@ -74,4 +115,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
