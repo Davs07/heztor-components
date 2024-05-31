@@ -4,10 +4,13 @@ import { Button } from "./components/ui/button";
 import { Card } from "./components/ui/card";
 import { Text } from "./components/ui/custom/text";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
+import CustomTabs from "./components/sections/CustomTabs";
 
 function App() {
   return (
-    <div className="w-screen h-screen min-h-screen bg-background text-primary flex flex-col gap-6 px-8 py-6">
+    <div
+      className="w-screen h-screen min-h-screen overflow-auto
+    bg-background text-primary flex flex-col gap-6 px-8 py-6">
       <Text variant={"h1"}>Componentes</Text>
       <div className="w-full flex flex-row gap-8">
         <div className="flex flex-col gap-4">
@@ -123,16 +126,13 @@ function App() {
             <TabsList className="bg-accent shadow-none p-1">
               <TabsTrigger
                 value="value1"
-                className="data-[state=active]:bg-card data-[state=active]:shadow-sm">
+                className="rounded-none border-b-8 border-transparent data-[state=active]:border-main">
                 Tab 1
               </TabsTrigger>
               <TabsTrigger
                 value="value2"
-                className="data-[state=active]:bg-card">
-                Tab 2
-                <div className="w-4 h-4">
-
-                </div>
+                className="rounded-none  border-b-8 border-transparent data-[state=active]:border-main">
+                Tab 2<div className="w-4 h-4"></div>
               </TabsTrigger>
             </TabsList>
             <TabsContent value="value1">
@@ -142,6 +142,8 @@ function App() {
               <Text variant={"psm"}>Content 2</Text>
             </TabsContent>
           </Tabs>
+
+          <CustomTabs/>
         </div>
       </div>
     </div>
