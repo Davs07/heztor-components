@@ -10,7 +10,7 @@ const tabsListVariants = cva("inline-flex items-center justify-center  p-2  ", {
   variants: {
     variant: {
       default: "rounded-lg bg-card shadow text-muted-foreground",
-      antd: "border-b border-gray-300",
+      antd: "border-b border-gray-300 py-0",
       custom1: "rounded-lg bg-transparent shadow-none border",
       custom2: "rounded-lg bg-accent shadow-none p-1",
       custom3: "bg-accent shadow-none p-1",

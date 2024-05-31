@@ -1,5 +1,5 @@
 import React from "react";
-import { Text } from "./ui/custom/text";
+import { Text } from "./ui/text";
 import { Button } from "./ui/button";
 import { Card } from "./ui/card";
 

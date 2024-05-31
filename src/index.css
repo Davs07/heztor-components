@@ -137,3 +137,8 @@
 .bg-gradient-900 {
   background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%);
 }
+
+
+.tab-indicator-antd {
+  @apply absolute bottom-0 h-1 bg-blue-600 rounded-t-full transition-all duration-300;
+}

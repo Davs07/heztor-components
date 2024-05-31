@@ -2,8 +2,9 @@ import { Plus } from "lucide-react";
 import "./App.css";
 import { Button } from "./components/ui/button";
 import { Card } from "./components/ui/card";
-import { Text } from "./components/ui/custom/text";
+import { Text } from "./components/ui/text";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
+import { Separator } from "./components/ui/separator";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             Hola
           </Card>
         </div>
+        <Separator orientation="vertical" />
         <div className="flex flex-col gap-4">
           <Text variant={"h3"}>Buttons</Text>
           <Button variant={"default"} size={"default"}>
@@ -63,6 +65,8 @@ function App() {
             destructive
           </Button>
         </div>
+        <Separator orientation="vertical" />
+
         <div className="flex flex-col gap-4">
           <Text variant={"h3"}>Tabs</Text>
           <Text variant={"h5"}>Default</Text>
@@ -132,6 +136,27 @@ function App() {
               <Text variant={"psm"}>Content 2</Text>
             </TabsContent>
           </Tabs>
+        </div>
+        <Separator orientation="vertical" />
+
+        <div className="flex flex-col gap-4">
+          <Text variant={"h3"}>Text</Text>
+
+          <Text variant={"h1"}>H1</Text>
+          <Text variant={"h2"}>H2</Text>
+          <Text variant={"h3"}>H3</Text>
+          <Text variant={"h4"}>H4</Text>
+          <Text variant={"h5"}>H5</Text>
+          <Text variant={"plg"}>Párrafo 1</Text>
+          <Text variant={"pbase"}>Párrafo 2</Text>
+          <Text variant={"pmd"}>Párrafo 3</Text>
+          <Text variant={"psm"}>Párrafo 4</Text>
+          <Text variant={"pxs"}>Párrafo 5</Text>
+        </div>
+        <Separator orientation="vertical" />
+        <div className="flex flex-col gap-4">
+          <Text variant={"h3"}>Select</Text>
+       
         </div>
       </div>
     </div>
