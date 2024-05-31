@@ -4,7 +4,6 @@ import { Button } from "./components/ui/button";
 import { Card } from "./components/ui/card";
 import { Text } from "./components/ui/custom/text";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
-import CustomTabs from "./components/sections/CustomTabs";
 
 function App() {
   return (
@@ -79,60 +78,15 @@ function App() {
               <Text variant={"psm"}>Content 2</Text>
             </TabsContent>
           </Tabs>
+
           <Text variant={"h5"}>Custom 1</Text>
           <Tabs defaultValue="value1">
-            <TabsList className="bg-transparent shadow-none border">
-              <TabsTrigger
-                value="value1"
-                className="data-[state=active]:bg-card ">
+            <TabsList variant={"custom1"}>
+              <TabsTrigger variant={"custom1"} value="value1">
                 Tab 1
               </TabsTrigger>
-              <TabsTrigger
-                value="value2"
-                className="data-[state=active]:bg-card ">
+              <TabsTrigger variant={"custom1"} value="value2">
                 Tab 2
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="value1">
-              <Text variant={"psm"}>Content 1</Text>
-            </TabsContent>
-            <TabsContent value="value2">
-              <Text variant={"psm"}>Content 2</Text>
-            </TabsContent>
-          </Tabs>
-          <Text variant={"h5"}>Custom 2</Text>
-          <Tabs defaultValue="value1">
-            <TabsList className="bg-accent shadow-none p-1">
-              <TabsTrigger
-                value="value1"
-                className="data-[state=active]:bg-card data-[state=active]:shadow-sm">
-                Tab 1
-              </TabsTrigger>
-              <TabsTrigger
-                value="value2"
-                className="data-[state=active]:bg-card">
-                Tab 2
-              </TabsTrigger>
-            </TabsList>
-            <TabsContent value="value1">
-              <Text variant={"psm"}>Content 1</Text>
-            </TabsContent>
-            <TabsContent value="value2">
-              <Text variant={"psm"}>Content 2</Text>
-            </TabsContent>
-          </Tabs>
-          <Text variant={"h5"}>Custom 3</Text>
-          <Tabs defaultValue="value1">
-            <TabsList className="bg-accent shadow-none p-1">
-              <TabsTrigger
-                value="value1"
-                className="rounded-none border-b-8 border-transparent data-[state=active]:border-main">
-                Tab 1
-              </TabsTrigger>
-              <TabsTrigger
-                value="value2"
-                className="rounded-none  border-b-8 border-transparent data-[state=active]:border-main">
-                Tab 2<div className="w-4 h-4"></div>
               </TabsTrigger>
             </TabsList>
             <TabsContent value="value1">
@@ -143,7 +97,41 @@ function App() {
             </TabsContent>
           </Tabs>
 
-          <CustomTabs/>
+          <Text variant={"h5"}>Custom 2</Text>
+          <Tabs defaultValue="value1">
+            <TabsList variant={"custom2"}>
+              <TabsTrigger variant={"custom2"} value="value1">
+                Tab 1
+              </TabsTrigger>
+              <TabsTrigger variant={"custom2"} value="value2">
+                Tab 2
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="value1">
+              <Text variant={"psm"}>Content 1</Text>
+            </TabsContent>
+            <TabsContent value="value2">
+              <Text variant={"psm"}>Content 2</Text>
+            </TabsContent>
+          </Tabs>
+
+          <Text variant={"h5"}>Ant</Text>
+          <Tabs defaultValue="value1">
+            <TabsList variant={"antd"}>
+              <TabsTrigger variant={"antd"} value="value1">
+                Tab 1
+              </TabsTrigger>
+              <TabsTrigger variant={"antd"} value="value2">
+                Tab 2
+              </TabsTrigger>
+            </TabsList>
+            <TabsContent value="value1" variant={"antd"}>
+              <Text variant={"psm"}>Content 1</Text>
+            </TabsContent>
+            <TabsContent value="value2">
+              <Text variant={"psm"}>Content 2</Text>
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </div>
